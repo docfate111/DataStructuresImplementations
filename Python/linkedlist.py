@@ -137,10 +137,16 @@ class Node:
             self=self.getNext()
             count+=1
         return -1
+def listToLinkedList(n):
+    s=Node(n[0])
+    for i in n[1:]:
+        s+=i
+    return s
 if __name__=='__main__':
     n=Node(3)
     n+=4
     n+=5
     n+=10
     #n=n.removeFirst()
+    n=listToLinkedList([1, 2, 3])
     print(n, n.indexOf(4))
